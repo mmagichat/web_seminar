@@ -1,8 +1,6 @@
 DROP TABLE sessions; 
 
 CREATE TABLE sessions(
-  user CHAR (12) NOT NULL UNIQUE,
+  user VARCHAR (12) ,
   session_id text NOT NULL,
-  FOREIGN KEY (user) REFERENCES users(name)
-  ON UPDATE CASCADE
-  ON DELETE RESTRICT);
+  FOREIGN KEY (user) REFERENCES users(name));
